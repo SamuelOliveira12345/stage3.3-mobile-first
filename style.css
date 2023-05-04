@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /*Alterando a fonte padrão para 10px*/
+  font-size: 62.5%;
+
+  /*Font Family*/
+  --ff-primary: 'Staatliches', sans-serif;
+  --ff-secondary: 'Palanquin', cursive;
+
+  /*Font Size*/
+  --fs-primary: clamp(4rem, 1rem + 2vw, 6rem);
+  --fs-secondary: 2rem;
+  --fs-tertiary: clamp(2rem, 1rem + 2vw, 4rem)  
+}
+
+.page {
+  width: 38.4rem;
+  margin: 0 auto 55px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+
+  background-color: #8E9AAF;
+
+  padding: 3.6rem 0;
+
+  margin-bottom: 1.4rem;
+}
+
+header h1 {
+  font-family: var(--ff-primary);
+  color: #ffffff;
+  line-height: 3.4rem;
+  font-size: 4rem;
+  font-weight: 400;
+  letter-spacing: 0.05px;
+  text-align: center;
+  text-transform: uppercase;
+
+  background-color: #CBC0D3;
+
+  padding: 8px 0;
+
+  margin-top: 4rem;
+
+  width: 100%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 0 32px;
+}
+
+main p {
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-secondary);
+  line-height: 1.5rem;
+  align-items: center;
+  text-align: center;
+
+  color: #23053A;
+
+  max-width: 30.5rem;
+
+  margin-bottom: 6.3rem;
+}
+
+.card {
+  margin: 0 auto;
+  display: grid;
+  gap: 3.6rem;
+  position: relative;
+
+  max-width: 32rem;
+  height: auto;
+}
+
+.card img {
+  opacity: 0;
+  animation: topdown 500ms 200ms ease-in forwards;
+}
+
+.card h2 {
+  position: absolute;
+  right: 1.6rem;
+  top: 1.6rem;
+
+  width: 11.2rem;
+
+  font-family: var(--ff-primary);
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 3.4rem;
+  letter-spacing: 0.05rem;
+  color: #4A4E69;
+  text-align: center;
+  opacity: 0;
+
+  background: #FEEAFA;
+  border-radius: 20px;
+
+  animation: texth2 400ms 500ms ease-in forwards;
+}
+
+@keyframes topdown {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes texth2 {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
